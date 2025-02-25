@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menghitung HPP</title>
+</head>
+<body>
+    <h3> aplikasi pembayaran fotocopy</h3>
+    <from method="post" onsubmit="return false"></from>
+    <label>pilih anggota</label>
+    <input type="radio" name="setatus" id="pelanggan" checked>
+    <label for="pelanggan">pelanggan</label>
+    <input type="radio" name="setatus" id="bukanpelanggan" checked>
+    <label for="bukanpelanggan">bukan pelanggan</label> <br> </br>
+    <label for="jumlah">jumlah fotocopy</label>
+    <input type="number" id="jumlah" value=""> <br> <br>
+    <button onclick="hitungbayar()">hitung total pembayaran</button>
+    <p id="hasil"></p>
+    <script>
+        function hitungbayar() {
+            let status= document.getElementsByName('status').checked
+            let JF = document.getElementById('jumlah').value
+            if (pelanggan) {
+            }
+        }
+
+    </script>
+</body>
+</html>
