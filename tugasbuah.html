@@ -1,0 +1,46 @@
+<!DOCTYPE html><html>
+<head>
+    <title>Penjualan Buah-Buahan</title>
+</head>
+<body>
+    <h2>Penjualan Buah-Buahan</h2>
+    <label>Nama buah</label>
+    <input type="text" id="namaBuah" value="nanas"><br><label>Harga per kg</label>
+<input type="number" id="harga" value="100000"><br>
+
+<label>Jumlah pembelian</label>
+<input type="number" id="jumlah" value="2"> kg<br>
+
+<label>Total</label>
+<input type="text" id="total"><br>
+
+<label>Diskon</label>
+<input type="text" id="diskon" value="10%"><br>
+
+<label>Bayar</label>
+<input type="text" id="bayar"><br>
+
+<button onclick="hitungTotal()">Proses</button>
+<button onclick="resetForm()">Hapus</button>
+
+<script>
+    function hitungTotal() {
+        let harga = parseInt(document.getElementById("harga").value);
+        let jumlah = parseInt(document.getElementById("jumlah").value);
+        let total = harga * jumlah;
+        let diskon = total * 0.10;
+        let bayar = total - diskon;
+        
+        document.getElementById("total").value = total;
+        document.getElementById("bayar").value = bayar;
+    }
+    
+    function resetForm() {
+        document.getElementById("jumlah").value = "";
+        document.getElementById("total").value = "";
+        document.getElementById("bayar").value = "";
+    }
+</script>
+
+</body>
+</html>
